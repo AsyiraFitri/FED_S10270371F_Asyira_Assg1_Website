@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background:   #003366;
+    
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.navbar a img {
+    margin-right: 15px; /* Space to the right of each image */
+}
+.logo img {
+    width: 80px;
+}
+
+nav {
+    flex: 1; /* Take available space for centering */
+    text-align: center;
+}
+
+nav ul {
+    display: inline-flex; /* Use inline-flex to align items horizontally */
+    list-style-type: none; /* Remove default bullet points */
+    gap: 50px; /* Add spacing between nav items */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffc2c2;
+    font-weight: bold; /* Optional: Make the text bold */
+    font-size: 16px; /* Adjust font size */
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: lightgray; /* Change color on hover */
+}
+.menu-icon {
+    display: none; /* Hide by default for larger screens */
+    cursor: pointer; /* Pointer cursor for menu icon */
+}
+
+.cart-icon {
+    height: 30px;
+    width: 30px;
+}
+
+/* Carousel Section */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+  
+.carousel-image {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.carousel-images a {
+    display: block; /* Make links cover the entire image */
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 100%; /* Each image fills the carousel width */
+}  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+  .carousel-button.prev {
+    left: 10px;
+}
+  
+.carousel-button.next {
+    right: 10px;
+}
+
+
+/*New Arrival & Sale*/
+.new-arrivals {
+    padding: 50px 25px; /* Padding around the section */
+    background-color: #f8e1e1; /* Light background color */
+    text-align: center; /* Center the content */
+}
+
+.new-arrivals h1 {
+    font-size: xx-large; /* Large heading for New Arrivals */
+    margin-bottom: 30px; /* Space below the heading */
+    color:#003366
+}
+.sale {
+    padding: 50px 25px; /* Padding around the section */
+    background-color: #f8e1e1; /* Light background color */
+    text-align: center; /* Center the content */
+}
+.sale h1{
+    font-size: 50px; /* Large heading for New Arrivals */
+    margin-bottom: 30px; /* Space below the heading */
+    color: red;
+}
+
+.homeproducts {
+    display: flex;
+    justify-content: space-between; /* Space between each product */
+    gap: 20px; /* Adjust space between products */
+    flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+}
+
+.homeproduct {
+    width: 30%; /* Each product takes 30% of the container's width */
+    border: 1px solid #ddd; /* Light border around each product */
+    padding: 5px; /* Padding inside each product container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+    text-decoration: none; /* Remove underline from links */
+    color: #003366; /* Ensure text color is black */
+}
+
+.homeproduct:hover {
+    transform: scale(1.05); /* Slightly enlarge product on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.homeproduct-image {
+    width: 100%; /* Make image take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Divider between image and text */
+}
+
+.homeproduct-name {
+    font-size: large; /* Product name font size */
+    margin-top: 10px; /* Space above the product name */
+    font-weight: bold; /* Make the product name bold */
+}
+

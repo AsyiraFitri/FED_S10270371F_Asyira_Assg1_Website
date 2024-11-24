@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WELCOME!NAFApparel</title>
+        <link href="Style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                    <a href="index.html"><img src="Logo/LOGO02.png" width="125"/></a>  
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Product.html">Product</a></li>
+                            <li><a href="Review.html">Review</a></li>
+                            <li><a href="More.html">More</a></li>
+                        </ul>
+                    </nav>
+                    <a href="Cart.html"><img src="Logo/Cart.png" height="30" width="30" /></a>
+                    <a href="Account.html"><img src="Logo/Profile.png" height="30" width="30" /></a>
+                    <img src="Logo/Menu.png" height="30" width="30" class="menu-icon" onclick="menutoggle()"/>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="Featured">
+            <!-- Carousel Container -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <a href="featureprod1.html">
+                        <img src="BG/FeatureBG1.jpg" alt="FeaProd 1" class="carousel-image">
+                    </a>
+                    <a href="featureprod2.html">
+                        <img src="BG/FeatureBG2.jpg" alt="FeaProd 2" class="carousel-image">
+                    </a>
+                </div>
+                <button class="carousel-button prev" aria-label="Previous">&lt;</button>
+                <button class="carousel-button next" aria-label="Next">&gt;</button>
+            </div>
+            </section>
+            <section class="new-arrivals">
+                <!--New Arrival Conatainer-->
+                <h1>New Arrivals</h1>
+                <div class="homeproducts">
+                    <a href=".html" class="homeproduct">
+                        <img src="BG/NewWomen.png" alt="NewProd1" class="homeproduct-image">
+                        <p class="homeproduct-name">Souffle Yarn Crew Neck Sweater</p>
+                    </a>
+                    <a href=".html" class="homeproduct">
+                        <img src="BG/NewKids.png" alt="NewProd2" class="homeproduct-image">
+                        <p class="homeproduct-name">KIDS Fluffy Yarn Fleece Full-Zip Long Sleeve Jacket</p>
+                    </a>
+                    <a href=".html" class="homeproduct">
+                        <img src="BG/NewMen.png" alt="NewProd3" class="homeproduct-image">
+                        <p class="homeproduct-name">Flannel Regular Collar Long Sleeve Checked Shirt</p>
+                    </a>
+                </div>
+            </section>
+            <section class="sale">
+                <!--Sale Conatainer-->
+                <h1>Sale</h1>
+                <div class="homeproducts">
+                    <a href=".html" class="homeproduct">
+                        <img src="BG/SaleWomen.png" alt="SaleProd1" class="homeproduct-image">
+                        <p class="homeproduct-name">Brushed Jersey Oversized Blouson</p>
+                    </a>
+                    <a href=".html" class="homeproduct">
+                        <img src="BG/SaleKids.png" alt="SaleProd2" class="homeproduct-image">
+                        <p class="homeproduct-name">KIDS PUFFTECH Washable Parka (Bi-Colour)</p>
+                    </a>
+                    <a href=".html" class="homeproduct">
+                        <img src="BG/SaleMen.png" alt="SaleProd3" class="homeproduct-image">
+                        <p class="homeproduct-name">Denim Jersey Long Sleeve Over Shirt</p>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+        
+    </body>
+    <script src="script.js"></script>
+</html>
