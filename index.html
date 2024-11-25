@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WELCOME!NAFApparel</title>
         <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -23,25 +26,25 @@
                     </nav>
                     <a href="Cart.html"><img src="Logo/Cart.png" height="30" width="30" /></a>
                     <a href="Account.html"><img src="Logo/Profile.png" height="30" width="30" /></a>
-                    <img src="Logo/Menu.png" height="30" width="30" class="menu-icon" onclick="menutoggle()"/>
+                    <img src="Logo/Menu.png" height="40" width="40" class="menu-icon" />
                 </div>
             </div>
         </header>
         <main>
             <section class="Featured">
-            <!-- Carousel Container -->
-            <div class="carousel">
-                <div class="carousel-images">
-                    <a href="featureprod1.html">
-                        <img src="BG/FeatureBG1.jpg" alt="FeaProd 1" class="carousel-image">
-                    </a>
-                    <a href="featureprod2.html">
-                        <img src="BG/FeatureBG2.jpg" alt="FeaProd 2" class="carousel-image">
-                    </a>
+                <!-- Carousel Container -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <a href="CCNOTS.html">
+                            <img src="BG/FeatureBG1.jpg" alt="FeaProd 1" class="carousel-image">
+                        </a>
+                        <a href="featureprod2.html">
+                            <img src="BG/FeatureBG2.jpg" alt="FeaProd 2" class="carousel-image">
+                        </a>
+                    </div>
+                    <button class="carousel-button prev" aria-label="Previous">&lt;</button>
+                    <button class="carousel-button next" aria-label="Next">&gt;</button>
                 </div>
-                <button class="carousel-button prev" aria-label="Previous">&lt;</button>
-                <button class="carousel-button next" aria-label="Next">&gt;</button>
-            </div>
             </section>
             <section class="new-arrivals">
                 <!--New Arrival Conatainer-->
@@ -81,7 +84,6 @@
             </section>
 
         </main>
-        
+        <script src="script.js"></script>
     </body>
-    <script src="script.js"></script>
 </html>

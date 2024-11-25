@@ -9,7 +9,10 @@ body {
 }
 
 header {
-    background:   #003366;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background:#003366;
 }
 
 .container {
@@ -48,7 +51,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #ffc2c2;
-    font-weight: bold; /* Optional: Make the text bold */
+    font-weight: bold;
     font-size: 16px; /* Adjust font size */
     transition: color 0.3s; /* Smooth hover effect */
 }
@@ -69,6 +72,7 @@ nav ul li a:hover {
 /* Carousel Section */
 .carousel {
     position: relative;
+    padding-top: 50px;
     max-width: 100%;
     overflow: hidden;
   }
@@ -88,7 +92,7 @@ nav ul li a:hover {
     flex-shrink: 0; /* Prevent shrinking */
     width: 100%; /* Each image fills the carousel width */
 }  
-  .carousel-button {
+.carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -99,7 +103,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
   
-  .carousel-button.prev {
+.carousel-button.prev {
     left: 10px;
 }
   
@@ -139,23 +143,25 @@ nav ul li a:hover {
 }
 
 .homeproduct {
+    border-radius: 10px;
     width: 30%; /* Each product takes 30% of the container's width */
     border: 1px solid #ddd; /* Light border around each product */
     padding: 5px; /* Padding inside each product container */
     box-sizing: border-box; /* Ensure padding and border are included in width */
     transition: transform 0.3s ease; /* Smooth scale effect on hover */
     text-decoration: none; /* Remove underline from links */
-    color: #003366; /* Ensure text color is black */
+    color: #003366;
 }
 
 .homeproduct:hover {
     transform: scale(1.05); /* Slightly enlarge product on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    box-shadow: 0 4px 8px #00000033; /* Add shadow on hover */
 }
 
 .homeproduct-image {
     width: 100%; /* Make image take up the full width of the container */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
     border-bottom: 1px solid #ddd; /* Divider between image and text */
 }
 
@@ -165,3 +171,139 @@ nav ul li a:hover {
     font-weight: bold; /* Make the product name bold */
 }
 
+
+/*PRODUCT*/
+ /* Filters */
+.filter-section {
+    max-width: 1000px;
+    padding-top: 100px;
+    margin: auto;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-end;
+}
+
+.filter-section select {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.products-grid {
+    display: grid;
+    max-width: 1080px;
+    margin:auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  /* Product Grid */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    color: #003366;
+    text-decoration: none;
+    background: #fff;
+    position: relative;
+    display: block;
+}
+.product-card:hover {
+    transform: scale(1.05); /* Slightly enlarge product on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+.badges {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.badge {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.badge.sale {
+    background-color: #f44336;
+}
+
+.badge.new {
+    background-color: #3665f4; /* Green for New */
+}
+
+.badge.bestseller {
+    background-color: #f4eb36; /* Red for Bestseller */
+}
+
+.product-card h2 {
+    font-size: medium;
+    padding: 20px;
+    padding-bottom: 5px;
+}
+.product-card .original-price {
+    text-decoration: line-through; /* Strike-through for the original price */
+    color: #888; /* Light color for the original price */
+    margin-right: 10px;
+  }
+  
+  .product-card .discounted-price {
+    font-weight: bold;
+    color: #f44336;
+  }
+
+.product-card .price {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+
+.product-card .rating {
+    color: gold;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 800px) {
+    nav ul
+    {
+        position:absolute;
+        display:inline;
+        top: 50px;
+        left: 0;
+        background: #ccccff;
+        width: 100%;
+        overflow:hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #ffffff;
+    }
+    .menu-icon{
+        display:block;
+        cursor: pointer;
+    }
+}
+    

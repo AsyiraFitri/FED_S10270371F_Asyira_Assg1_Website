@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link href="Style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,9 +26,128 @@
                 </nav>
                 <a href="Cart.html"><img src="Logo/Cart.png" height="30" width="30" /></a>
                 <a href="Account.html"><img src="Logo/Profile.png" height="30" width="30" /></a>
-                <img src="Logo/Menu.png" height="40" width="40" class="menu-icon" onclick="menutoggle()"/>
+                <img src="Logo/Menu.png" height="40" width="40" class="menu-icon"/>
             </div>
         </div>
     </header>
+    <main>
+        <!-- Filter Dropdown for Categories -->
+        <div class="filter-section">
+            <label for="category-filter">Filter by Category: </label>
+            <select id="category-filter">
+                <option value="">All</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+                <option value="kids">Kids</option>
+                <option value="bestseller">BestSeller</option>
+                <option value="sale">Sale</option>
+                <option value="new">New</option>
+            </select>
+        </div>
+        <!-- Main Product Grid -->
+        <div class="products-grid">
+            <!-- product sale women-->
+            <a href=".html" class="product-card" data-category="bestseller women men">
+                <img src="CLOTHES/Cotton Crew Neck Oversized T-Shirt(unisex-featured)/Black.png" alt="Cotton Crew Neck Oversized T-Shirt">
+                <div class="badges">
+                    <span class="badge bestseller">BestSeller</span>
+                </div>
+                <h2>Cotton Crew Neck Oversized T-Shirt</h2>
+                <p class="price">$19.90</p>
+                <p class="rating">★★★★★</p>
+            </a>
+            <!-- product sale women-->
+            <a href=".html" class="product-card" data-category="women sale">
+                <img src="CLOTHES\Brushed Jersey Oversized Blouson(women-sale)\Dark Gray.png" alt="Brushed Jersey Oversized Blouson">
+                <div class="badges">
+                    <span class="badge sale">Sale</span>
+                </div>
+                <h2>Brushed Jersey Oversized Blouson</h2>
+                <p class="price">
+                    <span class="original-price">$39.90</span>
+                    <span class="discounted-price">$29.90</span>
+                </p>
+                <p class="rating">★★★★★</p>
+            </a>
+            <!-- product sale men-->
+            <a href=".html" class="product-card" data-category="men sale">
+                <img src="CLOTHES/Denim Jersey Long Sleeve Over Shirt(men-sale)/Black.png" alt="Denim Jersey Long Sleeve Over Shirt">
+                <div class="badges">
+                    <span class="badge sale">Sale</span>
+                </div>
+                <h2>Denim Jersey Long Sleeve Over Shirt</h2>
+                <p class="price">
+                    <span class="original-price">$49.90</span>
+                    <span class="discounted-price">$39.90</span>
+                </p>
+                <p class="rating">★★★★☆</p>
+            </a>
+            <!-- product sale kids-->
+            <a href=".html" class="product-card" data-category="kids sale">
+                <img src="CLOTHES/KIDS PUFFTECH Washable Parka (Bi-Colour)(kids-sale)/Blue.png" alt="KIDS PUFFTECH Washable Parka (Bi-Colour)">
+                <div class="badges">
+                    <span class="badge sale">Sale</span>
+                </div>
+                <h2>KIDS PUFFTECH Washable Parka (Bi-Colour)</h2>
+                <p class="price">
+                    <span class="original-price">$39.90</span>
+                    <span class="discounted-price">$29.90</span>
+                </p>
+                <p class="rating">★★★★☆</p>
+            </a>
+            <!-- product new women-->
+            <a href=".html" class="product-card" data-category="women new">
+                <img src="CLOTHEs/Souffle Yarn Crew Neck Sweater(women-new)/Blue.png" alt="Souffle Yarn Crew Neck Sweater">
+                <div class="badges">
+                    <span class="badge new">New</span>
+                </div>
+                <h2>Souffle Yarn Crew Neck Sweater</h2>
+                <p class="price">$29.90</p>
+                <p class="rating">★★★★☆</p>
+            </a>
+            <!-- product new men-->
+            <a href=".html" class="product-card" data-category="men new">
+                <img src="CLOTHES/Flannel Regular Collar Long Sleeve Checked Shirt(men-new)/Natural.png" alt="Flannel Regular Collar Long Sleeve Checked Shirt">
+                <div class="badges">
+                    <span class="badge new">New</span>
+                </div>
+                <h2>Flannel Regular Collar Long Sleeve Checked Shirt</h2>
+                <p class="price">$49.90</p>
+                <p class="rating">★★★★★</p>
+            </a>
+              <!-- product new kids-->
+            <a href=".html" class="product-card" data-category="kids new">
+                <img src="CLOTHES/KIDS Fluffy Yarn Fleece Full-Zip Long Sleeve Jacket(kids-new)/Navy.png" alt="KIDS Fluffy Yarn Fleece Full-Zip Long Sleeve Jacket">
+                <div class="badges">
+                    <span class="badge new">New</span>
+                </div>
+                <h2>KIDS Fluffy Yarn Fleece Full-Zip Long Sleeve Jacket</h2>
+                <p class="price">$39.90</p>
+                <p class="rating">★★★☆☆</p>
+            </a>
+            <!-- product women-->
+            <a href=".html" class="product-card" data-category="women">
+                <img src="CLOTHES/Wide Chino Pants(women)/Pants.png" alt="Wide Chino Pants">
+                <h2>Wide Chino Pants</h2>
+                <p class="price">$39.90</p>
+                <p class="rating">★★★★★</p>
+            </a>
+            <!-- product men-->
+            <a href=".html" class="product-card" data-category="men">
+                <img src="CLOTHES/Pleated Wide Pants (Regular Length 70cm -76cm)(men)/Pants.png" alt="Pleated Wide Pants (Regular Length 70cm -76cm)">
+                <h2>Pleated Wide Pants (Regular Length 70cm -76cm)</h2>
+                <p class="price">$49.90</p>
+                <p class="rating">★★★★☆</p>
+            </a>
+              <!-- product kids-->
+            <a href=".html" class="product-card" data-category="kids">
+                <img src="CLOTHES/KIDS Wide Fit Jeans Zip-Fly (Denim)(kids)/Blue.png " alt="KIDS Wide Fit Jeans Zip-Fly (Denim)">
+                <h2>KIDS Wide Fit Jeans Zip-Fly (Denim)</h2>
+                <p class="price">$29.90</p>
+                <p class="rating">★★★★★</p>
+            </a>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
