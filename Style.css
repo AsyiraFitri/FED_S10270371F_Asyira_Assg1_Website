@@ -696,7 +696,7 @@ button[type="submit"]:hover {
 
 
 
-  @media (max-width: 800px) {
+@media (max-width: 800px) {
     nav ul
     {
         position:absolute;
