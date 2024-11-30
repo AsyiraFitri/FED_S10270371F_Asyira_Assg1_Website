@@ -145,6 +145,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  
+    // Function to show the modal with a dynamic message
+  function popupMsg(message) {
+    const modal = document.getElementById("popupModal");
+    const popupMessage = document.getElementById("popupMessage");
+    
+    // Set the message for the modal
+    popupMessage.textContent = message;
+    
+    // Display the modal
+    modal.style.display = "flex";
+
+    setTimeout(() => {
+      const modal = document.getElementById("popupModal");
+      modal.style.display = "none";
+    }, 2500);
+  }
+
+  // Function to close the modal if the user clicks outside of it
+  window.addEventListener("click", (event) => {
+    const modal = document.getElementById("popupModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 
   function getSelectedColor() {
     const selectedColor = document.querySelector(".color-option.active");
@@ -167,11 +192,16 @@ document.addEventListener("DOMContentLoaded", () => {
         color: getSelectedColor(),
         size: getSelectedSize(),
         image: document.querySelector(".main-image img").src,
-        quantity: parseInt(document.querySelector(".quantity").value) || 1,
+        quantity: parseInt(document.querySelector(".quantity").value),
       };
-
+      // Validate the quantity
+      if (product.quantity <= 0 || isNaN(product.quantity)) { // || if it's not a valid number
+        popupMsg("Quantity cannot be 0.");
+        return;  // Stop the function from continuing if the quantity is invalid
+      }
+      
       if (product.color === "Not selected") {
-        alert("Please select a color.");
+        popupMsg("Please select a color.");
         return;
       }
 
@@ -187,7 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       localStorage.setItem("cart", JSON.stringify(cartItems));
-      alert("Item added to cart!");
+      popupMsg("Item added to cart!");
+
     });
   }
 

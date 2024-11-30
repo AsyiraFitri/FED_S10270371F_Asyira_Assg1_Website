@@ -3,9 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+/* For headings (h1, h2) */
+h1, h2, .new-arrivals h1{
     font-family: 'Montserrat', sans-serif;
+}
+
+/* Links and Buttons */
+a, .add-to-cart, .checkout-button {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: 'Poppins', sans-serif;;
     color: #003366;
     background-color:  #f8e1e1;
 }
@@ -130,6 +138,7 @@ nav ul li a:hover {
     text-align: center; /* Center the content */
 }
 .sale h1{
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 80px; /* Large heading for New Arrivals */
     margin-bottom: 30px; /* Space below the heading */
     color: #f44336;
@@ -146,10 +155,10 @@ nav ul li a:hover {
 
 .homeproduct {
     background-color: #faeded;
-    border-radius: 15px;
+    border-radius: 30px;
     color: #003366;
     width: 25%; /* Each product takes 30% of the container's width */
-    border: 1px solid #ddd; /* Light border around each product */
+    border: 1px solid #f8e1e1; /* Light border around each product */
     padding: 10px; /* Padding inside each product container */
     box-sizing: border-box; /* Ensure padding and border are included in width */
     transition: transform 0.3s ease; /* Smooth scale effect on hover */
@@ -164,8 +173,8 @@ nav ul li a:hover {
 .homeproduct-image {
     width: 100%; /* Make image take up the full width of the container */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 15px;
-    border-bottom: 1px solid #ddd; /* Divider between image and text */
+    border-radius: 30px;
+    border-bottom: 1px solid #f8e1e1; /* Divider between image and text */
 }
 
 .homeproduct-name {
@@ -205,7 +214,7 @@ nav ul li a:hover {
   /* Product Grid */
 .product-card {
     border: 1px solid #ddd;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 10px;
     overflow: hidden;
     text-align: left;
@@ -223,7 +232,7 @@ nav ul li a:hover {
 .product-card img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 .badges {
     display: flex;
@@ -266,11 +275,13 @@ nav ul li a:hover {
     margin-right: 10px;
   }
   
-  .product-card .discounted-price {
+.product-card .discounted-price {
     font-weight: bold;
     color: #f44336;
-  }
-
+}
+.product-card .category{
+    padding-left:20px;
+}
 .product-card .price {
     padding-left: 20px;
     font-size: 16px;
@@ -294,7 +305,7 @@ nav ul li a:hover {
     width: 1080px;
     margin: auto;
 }
-  .product-directory {
+.product-directory {
     font-size: 14px;
     margin-bottom: 20px;
     color: #555;
@@ -371,9 +382,10 @@ nav ul li a:hover {
     height: 20px;
     border-radius: 50%;
     cursor: pointer;
+    border:1.5px solid #ffffff;
 }
 .color-option.active {
-    border:2px inset #003366;
+    border:2px ridge #003366;
 }
 
 /* Quantity and Add to Cart */
@@ -402,6 +414,28 @@ nav ul li a:hover {
 
 .add-to-cart:hover {
     background-color: #0056b3;
+}
+/* Modal Styles */
+.popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999; /* Ensure it appears on top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center;
+}
+  
+.popup-modal-content {
+    background-color: #f8e1ef;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /*CART*/
@@ -517,7 +551,11 @@ nav ul li a:hover {
 }
 
 .summary-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 65px;
     margin-bottom: 5px;
+
 }
 
 .summary-item.total {
@@ -546,10 +584,119 @@ nav ul li a:hover {
 }
 
 
+.review-heading{
+    width:1080px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin:auto;
+}
+.review-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin: auto;
+    padding: 50px;
+    background-color: #003366b4;
+    color: #faeded;
+    border-radius: 15px;
+}
+
+#review-form h2 {
+    font-size: 22px;    
+    margin-bottom: 15px;
+}
+
+#review-form .form-group {
+    margin-bottom: 15px;
+}
+
+#review-form label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#review-form .form-group input,
+#review-form select,
+#review-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #faeded;
+    border-radius: 5px;
+}
+
+#review-form textarea {
+    resize: vertical;
+}
+
+#review-form .rating {
+    margin-bottom: 15px;
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: gray; /* Default color */
+  }
+
+.star.selected {
+    color: gold;
+}
+.star:hover {
+    color: #ffa500; /* Orange color for hover */
+}
+
+button[type="submit"] {
+    background-color: #ffc2c2;
+    color: #003366;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #f8e1e1;
+}
+
+/* Display Reviews */
+.reviews-container h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.review {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.review-product-image {
+    width: 100px;  
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review .stars {
+    color: gold;
+}
+.review-name{
+    font-style: Bolder;
+    padding:10px;
+}
+.review .review-text {
+    margin-top: 10px;
+    font-size: 16px;
+}
 
 
 
-  @media only screen and (max-width: 800px) {
+
+  @media (max-width: 800px) {
     nav ul
     {
         position:absolute;

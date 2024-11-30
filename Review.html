@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review</title>
     <link href="Style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,5 +30,104 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="review-heading"><h1>Review</h1></div>
+        <!-- Review Form Section -->
+        <div class="review-container">
+            <div id="review-form">
+                <h2>Leave a Review</h2>
+                <form id="reviewForm">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">Your Name: </label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <!-- Product Selection -->
+                    <div class="form-group">
+                        <label for="product">Select Product:</label>
+                        <select id="product" required>
+                            <option value="">Select a product</option>
+                            <option value="Cotton Crew Neck Oversized T-Shirt" data-image="CLOTHES\Cotton Crew Neck Oversized T-Shirt(unisex-featured)\Black.png">Cotton Crew Neck Oversized T-Shirt</option>
+                            <option value="Brushed Jersey Oversized Blouson" data-image="CLOTHES\Brushed Jersey Oversized Blouson(women-sale)\Dark-Gray.png">Brushed Jersey Oversized Blouson</option>
+                            <option value="Denim Jersey Long Sleeve Over Shirt" data-image="CLOTHES\Denim Jersey Long Sleeve Over Shirt(men-sale)\Black.png">Denim Jersey Long Sleeve Over Shirt</option>
+                            <option value="Flannel Regular Collar Long Sleeve Checked Shirt" data-image="CLOTHES\Flannel Regular Collar Long Sleeve Checked Shirt(men-new)\Natural.png">Flannel Regular Collar Long Sleeve Checked Shirt</option>
+                            <option value="KIDS PUFFTECH Washable Parka (Bi-Colour)" data-image="CLOTHES\KIDS PUFFTECH Washable Parka (Bi-Colour)(kids-sale)\Off White.png">KIDS PUFFTECH Washable Parka (Bi-Colour)</option>
+                            <option value="KIDS Fluffy Yarn Fleece Full-Zip Long Sleeve Jacket" data-image="CLOTHES\KIDS Fluffy Yarn Fleece Full-Zip Long Sleeve Jacket(kids-new)\Dark Blue.png">KIDS Fluffy Yarn Fleece Full-Zip Long Sleeve Jacket</option>
+                            <option value="KIDS Wide Fit Jeans Zip-Fly (Denim)" data-image="CLOTHES\KIDS Wide Fit Jeans Zip-Fly (Denim)(kids)\Gray.png">KIDS Wide Fit Jeans Zip-Fly (Denim)</option>
+                            <option value="Wide Chino Pants" data-image="CLOTHES\Wide Chino Pants(women)\Pants.png">Wide Chino Pants</option>
+                            <option value="Pleated Wide Pants (Regular Length 70cm -76cm)" data-image="CLOTHES\Pleated Wide Pants (Regular Length 70cm -76cm)(men)\Pants.png">Pleated Wide Pants (Regular Length 70cm -76cm)</option>
+                        </select>
+                    </div>
+    
+                    <!-- Rating Section -->
+                    <div class="ratings">
+                        <label for="ratings">Rating: </label>
+                        <div class="stars" id="ratings">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                            
+                        </div>                        
+                    </div>
+    
+                    <!-- Review Text -->
+                    <div class="form-group">
+                        <label for="reviewText">Your Review:</label>
+                        <textarea id="reviewText" rows="5" placeholder="Write your review here..." required></textarea>
+                    </div>
+    
+                    <button type="submit">Submit Review</button>
+                </form>
+                
+                <!-- Existing Reviews Section -->
+                <div id="reviews" class="reviews-container">
+                    <h2>Customer Reviews</h2>
+                    <!-- Reviews will be dynamically loaded here -->
+                     <!-- Static Review 1 -->
+                    <div class="review">
+                        <div class="review-details">
+                            <div class="review-name">John Doe</div>
+                            <img class="review-product-image" src="CLOTHES\Cotton Crew Neck Oversized T-Shirt(unisex-featured)\Red.png" alt="Cotton Crew Neck Oversized T-Shirt">
+                            <h3 class="review-product">Cotton Crew Neck Oversized T-Shirt</h3>                          
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">This shirt is amazing! Super comfortable and fits well. I love the material and the style!</p>
+                        </div>
+                    </div>
+
+                    <!-- Static Review 2 -->
+                    <div class="review">
+                        <div class="review-details">
+                            <div class="review-name">Sarah Smith</div>
+                            <img class="review-product-image" src="CLOTHES\Brushed Jersey Oversized Blouson(women-sale)\Gray.png" alt="Brushed Jersey Oversized Blouson">
+                            <h3 class="review-product">Brushed Jersey Oversized Blouson</h3>                          
+                            <div class="stars">★★★★☆</div>
+                            <p class="review-text">Nice jacket, but I wish the sleeves were a little longer. Overall, it's a great buy!</p>
+                        </div>
+                    </div>
+
+                    <!-- Static Review 3 -->
+                    <div class="review">
+                        <div class="review-details">
+                            <div class="review-name">Mike Johnson</div>
+                            <img class="review-product-image" src="CLOTHES\Denim Jersey Long Sleeve Over Shirt(men-sale)\Blue.png" alt="Denim Jersey Long Sleeve Over Shirt">
+                            <h3 class="review-product">Denim Jersey Long Sleeve Over Shirt</h3>
+                            <div class="stars">★★★☆☆</div>
+                            <p class="review-text">Good quality but the fit is a bit tight around the shoulders. I would recommend going a size up.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Structure -->
+            <div id="popupModal" class="popup-modal">
+              <div class="popup-modal-content">
+                <p id="popupMessage">Alert</p>
+              </div>
+            </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="review.js"></script>
 </body>
 </html>
