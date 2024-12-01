@@ -7,6 +7,12 @@
 h1, h2, .new-arrivals h1{
     font-family: 'Montserrat', sans-serif;
 }
+.cart-heading, .review-heading, .more-heading{
+    width:1080px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin:auto;
+}
 
 /* Links and Buttons */
 a, .add-to-cart, .checkout-button {
@@ -363,6 +369,17 @@ nav ul li a:hover {
     flex-direction: column;
     gap: 20px;
     padding-left: 20px;
+    font: 20px;
+}
+.indivprod-details .original-price {
+    text-decoration: line-through; /* Strike-through for the original price */
+    color: #888; /* Light color for the original price */
+  }
+  
+.indivprod-details .indivprod-price-discounted {
+    font-weight: bold;
+    color: #f44336;
+    font-size: 20px;
 }
 .size-select{
     width: 60%;
@@ -439,14 +456,6 @@ nav ul li a:hover {
 }
 
 /*CART*/
-.cart-heading {
-    width:1080px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin:auto;
-
-}
-
 .cart {
     display: flex;
     flex-direction: column;
@@ -581,14 +590,6 @@ nav ul li a:hover {
 
 .checkout-button:hover {
     background-color: #0056b3;
-}
-
-
-.review-heading{
-    width:1080px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin:auto;
 }
 .review-container {
     display: flex;

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wide Chino Pants</title>
+    <link href="../Normalize.css" rel="stylesheet">
+    <link href="../Style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                <a href="../index.html"><img src="../Logo/LOGO02.png" width="125" alt="Logoicon"></a>  
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../Product.html">Product</a></li>
+                        <li><a href="../Review.html">Review</a></li>
+                        <li><a href="../More.html">More</a></li>
+                    </ul>
+                </nav>
+                <a href="../Cart.html"><img src="../Logo/Cart.png" height="30" width="30" alt="Carticon"></a>
+                <a href="../Account.html"><img src="../Logo/Profile.png" height="30" width="30" alt="Profileicon"></a>
+                <img src="../Logo/Menu.png" height="40" width="40" class="menu-icon" alt="Menuicon">
+            </div>
+        </div>
+    </header>
+    <main>
+      <div class="indivprod-container">
+        <div class="indivprod-images">
+            <nav class="product-directory">
+                <a href="../index.html">Home</a> &gt; 
+                <a href="../Product.html">Product</a> &gt; 
+                <span>Current Product</span>
+            </nav>
+          <!-- Main Image -->
+          <div class="main-image">
+            <img src="../CLOTHES/Wide Chino Pants(women)/Pants.png" alt="IndivProd Image">
+          </div>
+        
+            <!-- small images -->
+          <div class="image-sm">
+            <img src="../CLOTHES/Wide Chino Pants(women)/Pink.png" alt="WCPP" class="smallimg" data-image="../CLOTHES/Wide Chino Pants(women)/Pink.png" data-color ="Pink">
+            <img src="../CLOTHES/Wide Chino Pants(women)/Black.png" alt="WCPBk" class="smallimg" data-image="../CLOTHES/Wide Chino Pants(women)/Black.png" data-color="Black">
+            <img src="../CLOTHES/Wide Chino Pants(women)/Olive.png" alt="WCPO" class="smallimg" data-image="../CLOTHES/Wide Chino Pants(women)/Olive.png" data-color="Olive">
+            <img src="../CLOTHES/Wide Chino Pants(women)/Beige.png" alt="WCPBe" class="smallimg" data-image="../CLOTHES/Cotton Crew Neck Oversized T-Shirt(unisex-featured)/Beige.png" data-color="Beige">
+          </div>
+        </div>
+        
+        <div class="indivprod-details">
+          <h2 class="indivprod-title">Wide Chino Pants</h2>
+          <p class="indivprod-price">$39.90</p>
+
+      
+          <label for="size">Size:</label>
+          <select class="size-select" id="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+          </select>
+
+          <!-- Color Selection edit here--> 
+          <label for="color">Color:</label>
+          <div class="color-options">
+            <span class="color-option" data-color="Pink" style="background-color: #f8e1e1;"></span>
+            <span class="color-option" data-color="Black" style="background-color: #19191b;"></span>
+            <span class="color-option" data-color="Olive" style="background-color: #636452;"></span>
+            <span class="color-option" data-color="Beige" style="background-color: #bfa388"></span>
+          </div>
+        
+          <!-- Quantity and Add to Cart -->
+          <div class="quantity-cart">
+            <input type="number" value="1" class="quantity">
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+          <!-- Modal Structure -->
+            <div id="popupModal" class="popup-modal">
+              <div class="popup-modal-content">
+                <p id="popupMessage">Alert</p>
+              </div>
+            </div>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <h4 class="cart-item-name">${item.name}</h4>
               <p class="cart-item-color">Color: <span>${item.size}</span></p>
               <p class="cart-item-color">Color: <span>${item.color}</span></p>
-              <p class="cart-item-price">Price: <span>$${item.price}</span></p>
+              <p class="cart-item-price">Price: <span>$${item.price.toFixed(2)}</span></p>
               <a href="#" class="remove-link" data-index="${index}">Remove</a>
             </div>
             <div class="cart-item-quantity">
