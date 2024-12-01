@@ -25,6 +25,7 @@ body {
 }
 main {
     padding-top:50px;
+    min-height: 100vh;
 }
 header {
     position: fixed;
