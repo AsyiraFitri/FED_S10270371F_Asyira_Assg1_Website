@@ -904,6 +904,7 @@ button[type="submit"]:hover {
   
 /*footer*/
 .footer {
+    width: 100%;
     background-color: #003366;
     color: #faeded;;
     text-align: center;
