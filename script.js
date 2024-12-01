@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       const modal = document.getElementById("popupModal");
       modal.style.display = "none";
-    }, 2500);
+    }, 3000);
   }
 
   // Function to close the modal if the user clicks outside of it
@@ -298,6 +298,81 @@ document.addEventListener("DOMContentLoaded", () => {
           location.reload();
         }
       });
+    });
+  }
+
+  
+  const proceedButton = document.getElementById("proceed-to-checkout");
+  const paymentForm = document.getElementById("payment-form");
+  
+  if (proceedButton && paymentForm) {
+    proceedButton.addEventListener("click", () => {
+      // Ensure the cart exists and hide it
+      const cartContainer = document.querySelector(".cart");
+      if (cartContainer) {
+        cartContainer.style.display = "none"; // Hide the cart
+      }
+  
+      // Show payment form
+      paymentForm.style.display = "block";
+    });
+  }
+  
+  // Handle payment submission (for demonstration)
+  const paymentSubmitButton = document.querySelector(".btn-submit");
+  if (paymentSubmitButton) {
+    paymentSubmitButton.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent the form from submitting immediately
+  
+      // Validate payment details
+      const cardNumber = document.getElementById("card-number").value;
+      const expiryDate = document.getElementById("expiry-date").value;
+      const cvv = document.getElementById("cvv").value;
+  
+      if (!cardNumber || !expiryDate || !cvv) {
+        popupMsg("Please fill in all payment details.");
+        return;
+      }
+
+      
+      const expiryDateRegex = /^(0[1-9]|1[0-2])\/\d{4}$/;
+
+      if (!expiryDateRegex.test(expiryDate)) {
+        alert("Please enter a valid expiry date in MM/YYYY format.");
+        return;
+      }
+
+      // Additional logic to ensure the date is not in the past
+      const [month, year] = expiryDate.split('/').map(num => parseInt(num));
+      const expiryDateObj = new Date(year, month - 1); // Convert to Date object
+      const today = new Date();
+      if (expiryDateObj < today) {
+        alert("Expiry date cannot be in the past.");
+        return;
+      }
+  
+      // Simulate a successful payment
+      popupMsg("Payment Successful!");
+  
+      // Clear the cart items after payment success
+      const cartItems = document.querySelector(".cart");
+      if (cartItems) {
+        cartItems.innerHTML = ""; // Remove all items in the cart
+      }
+      //Clear any cart summary (like subtotal, GST, etc.)
+      const cartSummary = document.querySelector(".cart-summary");
+      if (cartSummary) {
+        cartSummary.innerHTML = ""; // Clear summary if needed
+      }
+
+      // Clear local storage
+      localStorage.clear(); 
+      setTimeout(() => {
+        // Redirect to the home page after a delay
+        window.location.href = "index.html"; // Redirect to the home page
+        // OR
+        // window.location.reload(); // If you want to reload the current page
+      }, 3000); 
     });
   }
 });

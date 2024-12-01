@@ -15,44 +15,84 @@
       <div class="container">
           <div class="navbar">
               <div class="logo">
-              <a href="../index.html"><img src="../Logo/LOGO02.png" width="125" alt=""></a>  
+              <a href="index.html"><img src="Logo/LOGO02.png" width="125" alt=""></a>  
               </div>
               <nav>
                   <ul id="MenuItems">
-                      <li><a href="../index.html">Home</a></li>
-                      <li><a href="../Product.html">Product</a></li>
-                      <li><a href="../Review.html">Review</a></li>
-                      <li><a href="../More.html">More</a></li>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="Product.html">Product</a></li>
+                      <li><a href="Review.html">Review</a></li>
+                      <li><a href="More.html">More</a></li>
                   </ul>
               </nav>
-              <a href="../Cart.html"><img src="../Logo/Cart.png" height="30" width="30" alt="Carticon"></a>
-              <a href="../Account.html"><img src="../Logo/Profile.png" height="30" width="30" alt="Profileicon"></a>
-              <img src="../Logo/Menu.png" height="40" width="40" class="menu-icon" alt="Menuicon">
+              <a href="Cart.html"><img src="Logo/Cart.png" height="30" width="30" alt="Carticon"></a>
+              <a href="Account.html"><img src="Logo/Profile.png" height="30" width="30" alt="Profileicon"></a>
+              <img src="Logo/Menu.png" height="40" width="40" class="menu-icon" alt="Menuicon">
           </div>
       </div>
     </header>
       <main>
         <div class="cart-heading"><h1>Shopping Cart</h1></div>
       <!-- Cart Table -->
-        <div class="cart">
-          <div class="empty-cart-message" style="display: none;">
-            <p>Your cart is empty.</p>
-            <a href="Product.html" class="continue-shopping">Continue Shopping</a>
+          <div class="cart">
+            <div class="empty-cart-message" style="display: none;">
+              <p>Your cart is empty.</p>
+              <a href="Product.html" class="continue-shopping">Continue Shopping</a>
+            </div>
+            <div class="cart-items">
+              <!-- cart items dynamically inserted here -->
           </div>
-          <div class="cart-items">
-            <!-- cart items dynamically inserted here -->
+          
+          <div class="cart-summary">
+            <p class="summary-item"><strong>Subtotal:</strong> </p>
+            <p class="summary-item"><strong>7% GST:</strong> </p>
+            <p class="summary-item total"><strong>Total:</strong> </p>
+          </div>
+          <div class="checkout">
+            <button class="checkout-button" id="proceed-to-checkout">Proceed to Checkout</button>
+          </div> 
+        </div> 
+          <div id="payment-form" class="payment-form" style="display:none;">
+            <h3>Payment Information</h3>
+            <form>
+              <label for="card-number">Card Number</label>
+              <input type="text" id="card-number" name="card-number" maxlength="16" pattern="\d{16}" required placeholder="Enter 16-digit card number">
+            
+              <label for="expiry-date">Expiry Date (MM/YYYY)</label>
+              <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/YYYY" pattern="^(0[1-9]|1[0-2])\/\d{4}$">
+            
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required placeholder="Enter 3-digit CVV">
+            
+              <button type="submit" class="btn-submit">Pay Now</button>
+            </form>        
+          </div> 
         </div>
-        
-        <div class="cart-summary">
-          <p class="summary-item"><strong>Subtotal:</strong> </p>
-          <p class="summary-item"><strong>7% GST:</strong> </p>
-          <p class="summary-item total"><strong>Total:</strong> </p>
+        <!-- Modal Structure -->
+        <div id="popupModal" class="popup-modal">
+          <div class="popup-modal-content">
+            <p id="popupMessage">Alert</p>
         </div>
-        <div class="checkout">
-          <button class="checkout-button">Proceed to Checkout</button>
-        </div>
-      </div>    
+      </div>
+     </div>  
     </main>
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-logo">
+              <a href="index.html"><img src="Logo/LOGOfooter.png" alt="NAFApparel Logo" width="100"></a>
+          </div>
+          <div class="footer-links">
+              <a href="Product.html">Shop Now</a> |
+              <a href="More.html#contact-us">Contact Us</a> |
+              <a href="https://www.google.com/maps/search/?q=School+of+Infocomm+Technology,+535+Clementi+Rd,+Block+31,+Singapore+599489" target="_blank">Locate Us</a> |
+              <a href="https://www.instagram.com/asyirafitri/" target="_blank">Instagram</a> |
+              <a href="https://www.twitter.com" target="_blank">Twitter(commingsoon)</a>
+          </div>
+          <div class="footer-copyright">
+              <p>&copy; 2024 NAFApparel. All Rights Reserved.</p>
+          </div>
+      </div>
+    </footer>   
     <script src="script.js"></script>
   </body>
 </html>
